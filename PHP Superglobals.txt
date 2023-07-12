@@ -1,0 +1,40 @@
+Phần tử/Mã Mô tả
+$_SERVER['PHP_SELF'] Trả về tên tệp của tập lệnh hiện đang thực thi
+$_SERVER['GATEWAY_INTERFACE'] Trả về phiên bản Giao diện cổng chung (CGI) mà máy chủ đang sử dụng
+$_SERVER['SERVER_ADDR'] Trả về địa chỉ IP của máy chủ lưu trữ
+$_SERVER['SERVER_NAME'] Trả về tên của máy chủ lưu trữ (chẳng hạn như www.w3schools.com)
+$_SERVER['SERVER_SOFTWARE'] Trả về chuỗi nhận dạng máy chủ (chẳng hạn như Apache/2.2.24)
+$_SERVER['SERVER_PROTOCOL'] Trả về tên và bản sửa đổi của giao thức thông tin (chẳng hạn như HTTP/1.1)
+$_SERVER['REQUEST_METHOD'] Trả về phương thức yêu cầu được sử dụng để truy cập trang (chẳng hạn như POST)
+$_SERVER['REQUEST_TIME'] Trả về dấu thời gian bắt đầu yêu cầu (chẳng hạn như 1377687496)
+$_SERVER['QUERY_STRING'] Trả về chuỗi truy vấn nếu trang được truy cập thông qua chuỗi truy vấn
+$_SERVER['HTTP_ACCCEPT'] Trả về tiêu đề Chấp nhận từ yêu cầu hiện tại
+$_SERVER['HTTP_ACCEPT_CHARSET'] Trả về tiêu đề Accept_Charset từ yêu cầu hiện tại (chẳng hạn như utf-8,ISO-8859-1)
+$_SERVER['HTTP_HOST'] Trả về tiêu đề Máy chủ từ yêu cầu hiện tại
+$_SERVER['HTTP_REFERER'] Trả về URL đầy đủ của trang hiện tại (không đáng tin cậy vì không phải tác nhân người dùng nào cũng hỗ trợ nó)
+$_SERVER['HTTPS'] Tập lệnh có được truy vấn thông qua giao thức HTTP an toàn không
+$_SERVER['REMOTE_ADDR'] Trả về địa chỉ IP từ nơi người dùng đang xem trang hiện tại
+$_SERVER['REMOTE_HOST'] Trả về tên Máy chủ từ nơi người dùng đang xem trang hiện tại
+$_SERVER['REMOTE_PORT'] Trả về cổng đang được sử dụng trên máy của người dùng để giao tiếp với máy chủ web
+$_SERVER['SCRIPT_FILENAME'] Trả về tên đường dẫn tuyệt đối của tập lệnh hiện đang thực thi
+$_SERVER['SERVER_ADMIN'] Trả về giá trị được cung cấp cho chỉ thị SERVER_ADMIN trong tệp cấu hình máy chủ web (nếu tập lệnh của bạn chạy trên máy chủ ảo, nó sẽ là giá trị được xác định cho máy chủ ảo đó) (chẳng hạn như someone@w3schools.com )
+$_SERVER['SERVER_PORT'] Trả về cổng trên máy chủ đang được máy chủ web sử dụng để liên lạc (chẳng hạn như 80)
+$_SERVER['SERVER_SIGNATURE'] Trả về phiên bản máy chủ và tên máy chủ ảo được thêm vào các trang do máy chủ tạo
+$_SERVER['PATH_TRANSLATED'] Trả về đường dẫn dựa trên hệ thống tệp tới tập lệnh hiện tại
+$_SERVER['SCRIPT_NAME'] Trả về đường dẫn của tập lệnh hiện tại
+$_SERVER['SCRIPT_URI'] Trả về URI của trang hiện tại
+
+
+Mô tả siêu ký tự
+| Tìm một kết quả phù hợp cho bất kỳ một trong các mẫu được phân tách bằng | như trong: con mèo|con chó|con cá
+. Chỉ tìm một phiên bản của bất kỳ ký tự nào
+^ Tìm một kết quả khớp ở đầu chuỗi như trong: ^Xin chào
+$ Tìm một kết quả khớp ở cuối chuỗi như trong: World$
+\d Tìm một chữ số
+\s Tìm ký tự khoảng trắng
+\b Tìm một từ khớp ở đầu một từ như thế này: \bWORD hoặc ở cuối một từ như thế này: WORD\b
+\uxxxx Tìm ký tự Unicode được chỉ định bởi số thập lục phân xxxx
+
+preg_match() Trả về 1 nếu mẫu được tìm thấy trong chuỗi và 0 nếu không
+preg_match_all() Trả về số lần mẫu được tìm thấy trong chuỗi, cũng có thể là 0
+preg_replace() Trả về một chuỗi mới trong đó các mẫu phù hợp đã được thay thế bằng một chuỗi khác
