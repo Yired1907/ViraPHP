@@ -1,0 +1,42 @@
+<html>
+
+<head>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            showUser("1");
+        });
+        function showUser(str) {
+            if (!str) {
+                str = "1";
+            }
+            if (str == "") {
+                document.getElementById("text_user").innerHTML = "";
+                return;
+            } else {
+                var xmlhttp = new XMLHttpRequest();
+                xmlhttp.onreadystatechange = function () {
+                    if (this.readyState == 4 && this.status == 200) {
+                        document.getElementById("text_user").innerHTML = this.responseText;
+                    }
+                };
+                xmlhttp.open("GET", "getuser.php?q=" + str, true);
+                xmlhttp.send();
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <form>
+        <select name="users" onchange="showUser(this.value|| '1')">
+            <option value="">Select a person:</option>
+            <option value="1" selected>Qui</option>
+            <option value="2">Truong</option>
+            <option value="3">Phuc</option>
+        </select>
+    </form>
+    <br>
+    <div id="text_user"><b>Person info will be listed here...</b></div>
+
+</body>
